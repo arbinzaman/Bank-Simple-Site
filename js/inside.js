@@ -64,7 +64,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
 
    if( newWithdrawTotal>balanceTotalElement){
     alert('Baper bank e eto tk nai')
-  
+    return;
    }
    balanceTotalElement.value='';
 })
