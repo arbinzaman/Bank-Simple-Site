@@ -3,11 +3,12 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
     const valueDepositeString = deposite.value;
     const valueDeposite =parseFloat(valueDepositeString); 
   
-
-    if(isNaN(deposite)){
-      alert(('Please Provide a number'))
+    valueDeposite.value='';
+    if(isNaN(valueDeposite)){
+      alert('Please Provide a number')
+      return;
      }
-     deposite.value='';
+ 
   
     const currentTotal = document.getElementById('deposit-total');
     const previousCurrentTotalString = currentTotal.innerText;     
@@ -61,7 +62,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
    const wholeTotal = balanceTotalElement -newWithdrawTotal;
    balanceTotal.innerText = wholeTotal;
 
-   if( valueWithdraw>balanceTotalElement){
+   if( newWithdrawTotal>balanceTotalElement){
     alert('Baper bank e eto tk nai')
   
    }
